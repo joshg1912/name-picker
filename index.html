@@ -22,9 +22,12 @@
       field.setAttribute("id", i + 1);
       field.id = i+1;
     }
-    document.getElementById("wrapper").innerHTML += newField;
-  }
+    if(fields.length > 8){
+      window.alert("10 names max");
+    }else {
 
+  document.getElementById("wrapper").innerHTML += newField;}
+  }
  
 
   function getValue() {
@@ -37,7 +40,6 @@
     let value7 = document.getElementById("7").value;
     let value8 = document.getElementById("8").value;
     let value9 = document.getElementById("9").value;
-    let value10 = document.getElementById("10").value;
     let array = [];
 
     array.push(value1, value2, value3, value4, value5, value6, value7, value8, value9, value10);

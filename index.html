@@ -31,6 +31,14 @@
  
 
   function getValue() {
+    let fields = document.getElementsByTagName("input");
+    let values = [];
+    for(i = 0; i < fields.length; i++){
+      values.push(fields[i].value);
+    }
+    const name = values[Math.floor(Math.random() * values.length)];
+    console.log(name);
+    /*
     let value1 = document.getElementById("1").value;
     let value2 = document.getElementById("2").value;
     let value3 = document.getElementById("3").value;
@@ -40,19 +48,22 @@
     let value7 = document.getElementById("7").value;
     let value8 = document.getElementById("8").value;
     let value9 = document.getElementById("9").value;
+    */
+   /*
     let array = [];
 
-    array.push(value1, value2, value3, value4, value5, value6, value7, value8, value9, value10);
+    array.push(value1, value2, value3, value4, value5, value6, value7, value8, value9);
 
     for(i=0; i < array.length; i++){
-      if(array[i] == ''){
+      if(array[i] == ""){
         array.splice(i, i);
+      }else {
+        const name = array[Math.floor(Math.random() * array.length)];
+        console.log(array);
+        console.log(name);
       }
-      }
-      console.log(array);
-      const name = array[Math.floor(Math.random() * array.length)];
-      console.log(name);
-  
+    }
+  */
 }
     </script>
 </body>
